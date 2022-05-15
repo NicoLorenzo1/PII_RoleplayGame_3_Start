@@ -11,21 +11,20 @@ namespace Program
             book.AddSpell(new SpellOne());
             book.AddSpell(new SpellOne());
 
-            Wizard gandalf = new Wizard("Gandalf");
-            gandalf.AddItem(book);
+            //Wizard gandalf = new Wizard("Gandalf");
+            //gandalf.AddItem(book);
 
             Dwarf gimli = new Dwarf("Gimli");
+            Archer archer = new Archer("archer");
+            Knight knight = new Knight("knight");
+            BadHuman badHuman = new BadHuman("human");
+            BadHuman badHuman1 = new BadHuman("human1");
+            BadHuman badHuman2 = new BadHuman("human2");
 
-            Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
-            Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.AttackValue}");
-
-            gimli.ReceiveAttack(gandalf.AttackValue);
-
-            Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
-
-            gimli.Cure();
-
-            Console.WriteLine($"Someone cured Gimli. Gimli now has ❤️ {gimli.Health}");
+            
+            Encounter encounter = new Encounter();
+          
+            encounter.DoEncounter();
         }
     }
 }
