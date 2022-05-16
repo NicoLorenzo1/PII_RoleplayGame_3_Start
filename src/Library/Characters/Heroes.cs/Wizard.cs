@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Wizard : Hero
+    public class Wizard : Hero, IMagicCharacter
     {
         private List<IItem> items = new List<IItem>();
 
@@ -47,6 +47,15 @@ namespace RoleplayGame
                 }
                 return value;
             }
+        }
+        public void AddItem(IMagicalItem item)
+        {
+            this.magicalItems.Add(item);
+        }
+
+        public void RemoveItem(IMagicalItem item)
+        {
+            this.magicalItems.Remove(item);
         }
     }
 }
