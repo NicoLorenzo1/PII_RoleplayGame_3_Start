@@ -5,12 +5,12 @@ namespace RoleplayGame
 {
     public class Encounter
     {
-        private List<Hero> heroesList = Hero.heroesList;
-        private List<Enemy> enemiesList = Enemy.enemiesList;
+        private List<Hero> heroesList = new List<Hero>();
+        private List<Enemy> enemiesList = new List<Enemy>();
 
         public void DoEncounter()
         {
-            if (Hero.heroesList.Count == 0)
+            if (heroesList.Count == 0)
             {
                 Console.WriteLine("No hay suficiente cantidad de heroes para comenzar un encuentro");
             }
@@ -128,6 +128,14 @@ namespace RoleplayGame
                 }
             }
             return true;
+        }
+        public void AddEnemy(Character enemy)
+        {
+            enemiesList.Add(enemy as Enemy);
+        }
+        public void AddHero(Character heroe)
+        {
+            heroesList.Add(heroe as Hero);
         }
     }
 }
