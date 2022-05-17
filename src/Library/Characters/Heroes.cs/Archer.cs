@@ -10,7 +10,6 @@ namespace RoleplayGame
             this.Name = name;
             this.AddItem(new Bow());
             this.AddItem(new Helmet());
-            this.AddHero(this);
         }
     }
 }

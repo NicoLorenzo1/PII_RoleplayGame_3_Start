@@ -1,16 +1,17 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Knight : Hero
+    public class Orc : Enemy
     {
         private List<IItem> items = new List<IItem>();
 
-        public Knight(string name)
+        public Orc(string name)
         {
             this.Name = name;
+            this.AddItem(new Axe());
             this.AddItem(new Sword());
-            this.AddItem(new Armor());
-            this.AddItem(new Shield());
+            this.AddEnemy(this);
+            this.victoryPoints = 30;
         }
     }
 }
