@@ -11,7 +11,6 @@ namespace RoleplayGame
         {
             this.Name = name;
             this.AddItem(new Staff());
-            this.AddHero(this);
         }
 
 
