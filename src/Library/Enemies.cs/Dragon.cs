@@ -1,15 +1,16 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Archer : Hero
+    public class Dragon : Enemy
     {
-
-        public Archer(string name)
+        public Dragon(string name)
         {
             this.Name = name;
-            this.AddItem(new Bow());
+            this.AddItem(new Axe());
             this.AddItem(new Helmet());
+            this.victoryPoints = 25;
         }
+
         public override int AttackValue
         {
             get

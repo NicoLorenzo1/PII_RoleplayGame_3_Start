@@ -5,9 +5,6 @@ namespace RoleplayGame
 {
     public class Hero : Character
     {
-
-
-
         protected int victoryPointsCounter { get; set; }
 
         public void AddVictoryPoints(int vp)

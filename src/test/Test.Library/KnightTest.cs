@@ -17,10 +17,17 @@ namespace Test.Library
             Knight boromir = new Knight("Boromir");
 
             Archer lurtz = new Archer("Lurtz");
-            
+            Sword sword = new Sword();
+            Sword sword2 = new Sword();
+
+            lurtz.AddItem(sword);
+            lurtz.AddItem(sword2);
+
+
             boromir.ReceiveAttack(lurtz.AttackValue);
-            Assert.AreEqual(0, boromir.Health);
+            Assert.AreEqual(84, boromir.Health);
         }
+
 
         /// <summary>
         /// Test que se encarga de verificar el metodo Cure al momento de curar un personaje, en este caso al Knight
@@ -44,6 +51,30 @@ namespace Test.Library
         public void ValueItemTest()
         {
             Knight boromir = new Knight("Boromir");
+
+            Assert.AreEqual(20, boromir.AttackValue);
+            Assert.AreEqual(39, boromir.DefenseValue);
+        }
+
+        /// <summary>
+        /// Test que se encarga de verificar si se puede remover items que ya fueron añadidos a un character Knight.
+        /// </summary>
+        [Test]
+        public void RemoveItemTest()
+        {
+            Knight boromir = new Knight("Boromir");
+
+            Axe axe = new Axe();
+            Shield shield = new Shield();
+
+            boromir.AddItem(axe);
+            boromir.AddItem(shield);
+
+            Assert.AreEqual(45, boromir.AttackValue);
+
+            boromir.RemoveItem(axe);
+            boromir.RemoveItem(shield);
+
 
             Assert.AreEqual(20, boromir.AttackValue);
             Assert.AreEqual(39, boromir.DefenseValue);

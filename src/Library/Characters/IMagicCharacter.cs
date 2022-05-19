@@ -7,11 +7,4 @@ namespace RoleplayGame
         void RemoveItem(IMagicalItem item);
     }
 
-    /*
-        public interface IMagicCharacter <T>
-    {
-        void AddItem(T item);
-
-        void RemoveItem(T item);
-    }*/
 }

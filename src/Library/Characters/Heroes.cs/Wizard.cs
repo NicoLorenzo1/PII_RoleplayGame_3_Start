@@ -3,9 +3,8 @@ namespace RoleplayGame
 {
     public class Wizard : Hero, IMagicCharacter
     {
-        private List<IItem> items = new List<IItem>();
-
         private List<IMagicalItem> magicalItems = new List<IMagicalItem>();
+
 
         public Wizard(string name)
         {
@@ -14,7 +13,7 @@ namespace RoleplayGame
         }
 
 
-        public int AttackValue
+        public override int AttackValue
         {
             get
             {
@@ -31,7 +30,7 @@ namespace RoleplayGame
             }
         }
 
-        public int DefenseValue
+        public override int DefenseValue
         {
             get
             {
@@ -56,5 +55,7 @@ namespace RoleplayGame
         {
             this.magicalItems.Remove(item);
         }
+
+
     }
 }

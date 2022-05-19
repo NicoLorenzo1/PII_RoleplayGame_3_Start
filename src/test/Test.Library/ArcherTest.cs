@@ -1,7 +1,6 @@
 using NUnit.Framework;
 using RoleplayGame;
 
-
 namespace Test.Library
 {
     /// <summary>
@@ -22,8 +21,7 @@ namespace Test.Library
             //Con esto el dwarf tiene 2 axe. 1 creado de base y otro creado con Axe axe = new Axe() y luego AddItem(axe)
 
             Archer archer = new Archer("Legolas");
-           
-
+        
             
             //archer por defecto tiene un casco puesto. Por lo que tiene 18 de armor
             //2 axe = 50, 50-18=32, 100-32=68
@@ -34,7 +32,7 @@ namespace Test.Library
         }
 
         /// <summary>
-        /// Test que se encarga de verificar el metodo Cure al momento de curar un personaje, en este caso al Dwarf
+        /// Test que se encarga de verificar el metodo Cure al momento de curar un personaje, en este caso al Archer
         /// </summary>
         [Test]
         public void CureTest()
@@ -52,7 +50,7 @@ namespace Test.Library
         }
 
         /// <summary>
-        /// Test que se encarga de verificar si se asignan a los personajes los valores correspondientes de ataque y defensa al crear los items del Dwarf.
+        /// Test que se encarga de verificar si se asignan a los personajes los valores correspondientes de ataque y defensa al crear los items del Archer.
         /// </summary>
         [Test]
         public void ValueItemTest()
@@ -67,7 +65,7 @@ namespace Test.Library
             Assert.AreEqual(32, archer.DefenseValue);
         }
                 /// <summary>
-        /// Test que se encarga de verificar si se puede remover items que ya fueron añadidos a un character Dwarf.
+        /// Test que se encarga de verificar si se puede remover items que ya fueron añadidos a un character Archer.
         /// </summary>
         [Test]
         public void RemoveItemTest()
