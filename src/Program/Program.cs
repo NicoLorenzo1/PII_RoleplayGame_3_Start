@@ -23,14 +23,16 @@ namespace Program
             BadHuman badHuman2 = new BadHuman("human2");
 
 
-
             Encounter encounter = new Encounter();
-            Console.WriteLine(badHuman.AttackValue);
-            Console.WriteLine(gimli.AttackValue);
 
             encounter.AddEnemy(badHuman);
             encounter.AddHero(gimli);
+            encounter.AddEnemy(badHuman1);
+            encounter.AddEnemy(badHuman2);
+            encounter.AddHero(archer);
+            encounter.AddHero(knight);
             encounter.DoEncounter();
+
         }
     }
 }
