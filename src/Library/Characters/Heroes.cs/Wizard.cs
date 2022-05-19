@@ -3,8 +3,6 @@ namespace RoleplayGame
 {
     public class Wizard : Hero, IMagicCharacter
     {
-       // private List<IItem> items = new List<IItem>();
-
         private List<IMagicalItem> magicalItems = new List<IMagicalItem>();
 
 

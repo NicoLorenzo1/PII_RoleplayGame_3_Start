@@ -3,7 +3,6 @@ namespace RoleplayGame
 {
     public class Orc : Enemy
     {
-        //private List<IItem> items = new List<IItem>();
 
         public Orc(string name)
         {

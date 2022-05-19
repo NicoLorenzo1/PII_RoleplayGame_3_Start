@@ -23,7 +23,6 @@ namespace Test.Library
             Dwarf dwarf = new Dwarf("Gimli");
             //dwarf por defecto tiene un casco puesto. Por lo que tiene 18 de armor
             //2 arcos = 30, 30-18=12, 100-12=88
-            
 
             dwarf.ReceiveAttack(archer.AttackValue);
             Assert.AreEqual(88, dwarf.Health);

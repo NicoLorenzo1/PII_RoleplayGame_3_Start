@@ -3,8 +3,6 @@ namespace RoleplayGame
 {
     public class BadHuman : Enemy
     {
-        //private List<IItem> items = new List<IItem>();
-
         public BadHuman(string name)
         {
             this.Name = name;

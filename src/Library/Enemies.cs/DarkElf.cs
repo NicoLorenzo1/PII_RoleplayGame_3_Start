@@ -3,8 +3,6 @@ namespace RoleplayGame
 {
     public class DarkElf : Enemy
     {
-        //private List<IItem> items = new List<IItem>();
-
         public DarkElf(string name)
         {
             this.Name = name;
