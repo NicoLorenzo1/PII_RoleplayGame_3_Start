@@ -17,9 +17,12 @@ namespace Test.Library
             Knight boromir = new Knight("Boromir");
 
             Archer lurtz = new Archer("Lurtz");
+            Axe axe1 = new Axe();
+            //Para este test es necesario que se le haga daño al personaje Knight 
+            //por lo que se le agrega un arma al Archer para que lo logre
             
             boromir.ReceiveAttack(lurtz.AttackValue);
-            Assert.AreEqual(0, boromir.Health);
+            Assert.AreEqual(99, boromir.Health);
         }
 
         /// <summary>

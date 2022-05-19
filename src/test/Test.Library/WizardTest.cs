@@ -4,26 +4,32 @@ using RoleplayGame;
 namespace Test.Library
 {
     /// <summary>
-    /// Clase KnightTest, dentro de esta se van a verificar los metodos que el personaje Knight tiene.
+    /// Clase WizardTest, dentro de esta se van a verificar los metodos que el personaje Wizard tiene.
     /// </summary>
     public class WizardTest
     {
         /// <summary>
-        /// Test que se encarga de verificar el metodo receiveAttack cuando atacan al Knight
+        /// Test que se encarga de verificar el metodo receiveAttack cuando atacan al Wizard
         /// </summary>
         [Test]
         public void ReceiveAttackTest()
         {
             Wizard gandalf = new Wizard("Gandalf");
+            //El wizard tiene equipado un staff por defecto, por lo que su 
+            //DefenseValue es 100 (por alguna razón)
 
             Archer lurtz = new Archer("Lurtz");
+            Staff staff1 = new Staff();
+            lurtz.AddItem(staff1);
+            //Para este test es necesario que se le haga daño al personaje Wizard 
+            //por lo que se le agrega un arma al Archer para que lo logre
             
             gandalf.ReceiveAttack(lurtz.AttackValue);
-            Assert.AreEqual(0, gandalf.Health);
+            Assert.AreEqual(85, gandalf.Health);
         }
 
         /// <summary>
-        /// Test que se encarga de verificar el metodo Cure al momento de curar un personaje, en este caso al Knight
+        /// Test que se encarga de verificar el metodo Cure al momento de curar un personaje, en este caso al Wizard
         /// </summary>
         [Test]
         public void CureTest()
@@ -31,6 +37,8 @@ namespace Test.Library
             Wizard gandalf = new Wizard("Gandalf");
 
             Archer lurtz = new Archer("Lurtz");
+            Staff staff1 = new Staff();
+            lurtz.AddItem(staff1);
 
             gandalf.ReceiveAttack(lurtz.AttackValue);
             gandalf.Cure();
@@ -38,7 +46,7 @@ namespace Test.Library
         }
 
         /// <summary>
-        /// Test que se encarga de verificar si se asignan a los personajes los valores correspondientes de ataque y defensa al crear los items del Knight.
+        /// Test que se encarga de verificar si se asignan a los personajes los valores correspondientes de ataque y defensa al crear los items del Wizard.
         /// </summary>
         [Test]
         public void ValueItemTest()
