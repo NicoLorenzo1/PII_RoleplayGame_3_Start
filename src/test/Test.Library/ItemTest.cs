@@ -96,7 +96,7 @@ namespace Test.Library
         public void AxeReturnAttackTest()
         {
             IItem axe = new Axe();
-            Assert.AreEqual(50, axe.AttackValue);
+            Assert.AreEqual(25, axe.AttackValue);
         }
 
         [Test]
@@ -140,7 +140,7 @@ namespace Test.Library
         public void SwordReturnAttackTest()
         {
             IItem sword = new Sword();
-            Assert.AreEqual(50, sword.AttackValue);
+            Assert.AreEqual(20, sword.AttackValue);
         }
 
     }

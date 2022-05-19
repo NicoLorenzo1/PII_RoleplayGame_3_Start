@@ -19,7 +19,7 @@ namespace Test.Library
             Archer lurtz = new Archer("Lurtz");
             
             gandalf.ReceiveAttack(lurtz.AttackValue);
-            Assert.AreEqual(0, gandalf.Health);
+            Assert.AreEqual(100, gandalf.Health);
         }
 
         /// <summary>

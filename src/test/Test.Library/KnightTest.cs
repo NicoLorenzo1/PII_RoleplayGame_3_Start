@@ -19,7 +19,7 @@ namespace Test.Library
             Archer lurtz = new Archer("Lurtz");
             
             boromir.ReceiveAttack(lurtz.AttackValue);
-            Assert.AreEqual(0, boromir.Health);
+            Assert.AreEqual(100, boromir.Health);
         }
 
         /// <summary>

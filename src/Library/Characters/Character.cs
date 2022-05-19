@@ -1,37 +1,27 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Character 
+    public abstract class Character 
     {
         private int health = 100;
 
-        private List<IItem> items = new List<IItem>();
+        public List<IItem> items{get;private set;}
 
         public string Name { get; set; }
         
-        public int AttackValue
+        public virtual int AttackValue
         {
             get
             {
-                int value = 0;
-                foreach (IItem item in this.items)
-                {
-                    value += item.AttackValue;
-                }
-                return value;
+                return this.AttackValue;
             }
         }
 
-        public int DefenseValue
+        public virtual int DefenseValue
         {
             get
             {
-                int value = 0;
-                foreach (IItem item in this.items)
-                {
-                    value += item.DefenseValue;
-                }
-                return value;
+                return this.DefenseValue;
             }
         }
 
@@ -62,6 +52,10 @@ namespace RoleplayGame
 
         public void AddItem(IItem item)
         {
+            if (this.items == null) 
+            {
+                this.items = new List<IItem>();
+            }
             this.items.Add(item);
         }
 

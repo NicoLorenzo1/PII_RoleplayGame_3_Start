@@ -3,7 +3,7 @@ namespace RoleplayGame
 {
     public class Knight : Hero
     {
-        private List<IItem> items = new List<IItem>();
+        //private List<IItem> items = new List<IItem>();
 
         public Knight(string name)
         {
@@ -11,6 +11,31 @@ namespace RoleplayGame
             this.AddItem(new Sword());
             this.AddItem(new Armor());
             this.AddItem(new Shield());
+        }
+        public override int AttackValue
+        {
+            get
+            {
+                int value = 0;
+                foreach (IItem item in this.items)
+                {
+                    value += item.AttackValue;
+                }
+                return value;
+            }
+        }
+        
+        public override int DefenseValue
+        {
+            get
+            {
+                int value = 0;
+                foreach (IItem item in this.items)
+                {
+                    value += item.DefenseValue;
+                }
+                return value;
+            }
         }
     }
 }
