@@ -11,10 +11,16 @@ namespace Program
             book.AddSpell(new SpellOne());
             book.AddSpell(new SpellOne());
 
-            Wizard gandalf = new Wizard("Gandalf");
+            //Wizard gandalf = new Wizard("Gandalf");
+
+            Dwarf gimli = new Dwarf("Gimli");
+
+            Console.WriteLine(gimli.AttackValue);
+            Console.WriteLine(gimli.DefenseValue);
+
 
             //gandalf.AddItem(book);
-
+/*
             Dwarf gimli = new Dwarf("Gimli");
             Archer archer = new Archer("archer");
             Knight knight = new Knight("knight");
@@ -32,7 +38,7 @@ namespace Program
             encounter.AddHero(archer);
             encounter.AddHero(knight);
             encounter.DoEncounter();
-
+*/
         }
     }
 }
