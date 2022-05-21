@@ -26,7 +26,7 @@ Como bien saben, el proceso de refactoring cambia la estructura del código sin 
 
 ## Parte 3: Los malos (_The Bad Guys_)
 
-Crearemos un nuevo tipo de personajes: los Enemigos (_Enemies_). 
+Crearemos un nuevo tipo de personajes: los Enemigos (_Enemies_).TDD_End 
 
 Los **enemigos** son personajes (_characters_) que representan a "los malos". Los enemigos, al igual que los personajes que ya conocíamos, también tienen items para atacar y defender.
 

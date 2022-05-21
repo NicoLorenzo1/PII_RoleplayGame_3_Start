@@ -16,35 +16,21 @@ namespace Test.Library
         [Test]
         public void ArmorReturnDefenseTest()
         {
-            IItem armor = new Armor();
+            IDefenseItem armor = new Armor();
             Assert.AreEqual(25, armor.DefenseValue);
-        }
-
-        [Test]
-        public void AxeReturnDefenseTest()
-        {
-            IItem axe = new Axe();
-            Assert.AreEqual(0, axe.DefenseValue);
-        }
-
-        [Test]
-        public void BowReturnDefenseTest()
-        {
-            IItem bow = new Bow();
-            Assert.AreEqual(0, bow.DefenseValue);
         }
 
         [Test]
         public void HelmetReturnDefenseTest()
         {
-            IItem helmet = new Helmet();
+            IDefenseItem helmet = new Helmet();
             Assert.AreEqual(18, helmet.DefenseValue);
         }
 
         [Test]
         public void ShieldReturnDefenseTest()
         {
-            IItem shield = new Shield();
+            IDefenseItem shield = new Shield();
             Assert.AreEqual(14, shield.DefenseValue);
         }
 
@@ -67,22 +53,15 @@ namespace Test.Library
         [Test]
         public void StaffReturnDefenseTest()
         {
-            IItem staff = new Staff();
+            IDefenseItem staff = new Staff();
             Assert.AreEqual(100, staff.DefenseValue);
         }
 
         [Test]
-        public void SwordReturnDefenseTest()
+        public void StaffReturnAttackTest()
         {
-            IItem sword = new Sword();
-            Assert.AreEqual(0, sword.DefenseValue);
-        }
-
-        [Test]
-        public void ArmorReturnAttackTest()
-        {
-            IItem armor = new Armor();
-            Assert.AreEqual(0, armor.AttackValue);
+            IAttackItem staff = new Staff();
+            Assert.AreEqual(100, staff.AttackValue);
         }
 
         [Test]
@@ -95,29 +74,15 @@ namespace Test.Library
         [Test]
         public void AxeReturnAttackTest()
         {
-            IItem axe = new Axe();
+            IAttackItem axe = new Axe();
             Assert.AreEqual(25, axe.AttackValue);
         }
 
         [Test]
         public void BowReturnAttackTest()
         {
-            IItem bow = new Bow();
+            IAttackItem bow = new Bow();
             Assert.AreEqual(15, bow.AttackValue);
-        }
-
-        [Test]
-        public void HelmetReturnAttackTest()
-        {
-            IItem helmet = new Helmet();
-            Assert.AreEqual(0, helmet.AttackValue);
-        }
-
-        [Test]
-        public void ShieldReturnAttackTest()
-        {
-            IItem shield = new Shield();
-            Assert.AreEqual(0, shield.AttackValue);
         }
 
         [Test]
@@ -130,16 +95,9 @@ namespace Test.Library
         }
 
         [Test]
-        public void StaffReturnAttackTest()
-        {
-            IItem staff = new Staff();
-            Assert.AreEqual(100, staff.AttackValue);
-        }
-
-        [Test]
         public void SwordReturnAttackTest()
         {
-            IItem sword = new Sword();
+            IAttackItem sword = new Sword();
             Assert.AreEqual(20, sword.AttackValue);
         }
 

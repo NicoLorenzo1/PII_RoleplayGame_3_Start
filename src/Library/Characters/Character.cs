@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
+    /// <summary>
+    /// Modificamos esta clase que antiguamente era una interfaz ya que no detallaba en la letra del ejercicio que se debía mantener
+    /// como interfaz, además nos quedaba bastante mas cómodo para implementar la nueva funcionalidad de victoryPoints.
+    /// </summary>
     public abstract class Character 
     {
         private int health = 100;

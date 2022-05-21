@@ -1,9 +1,10 @@
+
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Wizard : Hero, IMagicCharacter
+    public class Wizard : MagicCharacter
     {
-        private List<IMagicalItem> magicalItems = new List<IMagicalItem>();
+        //private List<IMagicalItem> magicalItems = new List<IMagicalItem>();
 
 
         public Wizard(string name)
@@ -20,11 +21,20 @@ namespace RoleplayGame
                 int value = 0;
                 foreach (IItem item in this.items)
                 {
-                    value += item.AttackValue;
+                    if (item is IAttackItem)
+                    {
+                        value += ((IAttackItem)item).AttackValue;
+                    }
+
                 }
-                foreach (IMagicalItem item in this.magicalItems)
+
+                foreach (IMagicalAttackItem item in this.magicalItems)
                 {
-                    value += item.AttackValue;
+                    if (item is IMagicalAttackItem)
+                    {
+                        value += ((IMagicalAttackItem)item).AttackValue;
+                    }
+
                 }
                 return value;
             }
@@ -37,25 +47,22 @@ namespace RoleplayGame
                 int value = 0;
                 foreach (IItem item in this.items)
                 {
-                    value += item.DefenseValue;
+                    if (item is IDefenseItem)
+                    {
+                        value += ((IDefenseItem)item).DefenseValue;
+                    }
+
                 }
-                foreach (IMagicalItem item in this.magicalItems)
+                foreach (IMagicalDefenseItem item in this.magicalItems)
                 {
-                    value += item.DefenseValue;
+                    if (item is IMagicalDefenseItem)
+                    {
+                        value += ((IMagicalDefenseItem)item).DefenseValue;
+                    }
+
                 }
                 return value;
             }
         }
-        public void AddItem(IMagicalItem item)
-        {
-            this.magicalItems.Add(item);
-        }
-
-        public void RemoveItem(IMagicalItem item)
-        {
-            this.magicalItems.Remove(item);
-        }
-
-
     }
 }

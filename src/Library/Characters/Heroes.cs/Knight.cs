@@ -1,3 +1,4 @@
+
 using System.Collections.Generic;
 namespace RoleplayGame
 {
@@ -17,12 +18,16 @@ namespace RoleplayGame
                 int value = 0;
                 foreach (IItem item in this.items)
                 {
-                    value += item.AttackValue;
+                    if (item is IAttackItem)
+                    {
+                        value += ((IAttackItem)item).AttackValue;
+                    }
+
                 }
                 return value;
             }
         }
-        
+
         public override int DefenseValue
         {
             get
@@ -30,7 +35,11 @@ namespace RoleplayGame
                 int value = 0;
                 foreach (IItem item in this.items)
                 {
-                    value += item.DefenseValue;
+                    if (item is IDefenseItem)
+                    {
+                        value += ((IDefenseItem)item).DefenseValue;
+                    }
+
                 }
                 return value;
             }

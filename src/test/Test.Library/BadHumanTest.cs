@@ -4,7 +4,7 @@ using RoleplayGame;
 namespace Test.Library
 {
     /// <summary>
-    /// Clase KnightTest, dentro de esta se van a verificar los metodos que el personaje Knight tiene.
+    /// Clase BadHumanTest, dentro de esta se van a verificar los metodos que el personaje badHuman tiene.
     /// </summary>
     public class BadHumanTest
     {
