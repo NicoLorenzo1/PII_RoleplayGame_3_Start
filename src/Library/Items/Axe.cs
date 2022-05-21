@@ -1,19 +1,12 @@
 namespace RoleplayGame
 {
-    public class Axe : IItem
+    public class Axe : IAttackItem
     {
         public int AttackValue
         {
             get
             {
                 return 25;
-            }
-        }
-        public int DefenseValue
-        {
-            get
-            {
-                return 0;
             }
         }
     }

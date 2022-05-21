@@ -4,12 +4,12 @@ using RoleplayGame;
 namespace Test.Library
 {
     /// <summary>
-    /// Clase DwarfTest, dentro de esta se van a verificar los metodos que el personaje Dwarf tiene.
+    /// Clase ArcherTest, dentro de esta se van a verificar los metodos que el personaje Archer tiene.
     /// </summary>
     public class ArcherTest
     {
         /// <summary>
-        /// Test que se encarga de verificar el metodo receiveAttack cuando atacan al Dwarf
+        /// Test que se encarga de verificar el metodo receiveAttack cuando atacan al Archer
         /// </summary>
         [Test]
         public void ReceiveAttackTest()
